@@ -15,7 +15,7 @@ if not os.path.exists(SENT_FILE):
 
 with open(SENT_FILE, 'r',encoding="utf-8", errors="ignore") as f:
     sent_offers_keys = set(line.strip() for line in f)
-
+print("file read")
 # --- Telegram send  function ---
 
 
