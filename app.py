@@ -80,7 +80,7 @@ def create_message(offer):
         return 0
 
 i = 0
-for i in range (3)
+for i in range (3):
     i += 1
     check_for_offer()
     #sleep_time = random.randint(500, 700)
