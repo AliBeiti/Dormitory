@@ -44,7 +44,7 @@ def check_for_offer():
     url = "https://www.stwdo.de/wohnen/aktuelle-wohnangebote#residential-offer-list"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
-
+    print(soup.select_one('option[value="Dortmund"]').get_text().strip())
     Dortmund = soup.select_one(
         'option[value="Dortmund"]').get_text().strip() == "Dortmund"
     if Dortmund:
