@@ -80,9 +80,10 @@ def create_message(offer):
         return 0
 
 i = 0
-print("script started)
+print("script started")
 for i in range (2):
     i += 1
+    print(i)
     check_for_offer()
     #sleep_time = random.randint(500, 700)
     sleep_time = 500
