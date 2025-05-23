@@ -2,7 +2,7 @@ name: Dorm Offer Bot
 
 on:
   schedule:
-    - cron: "*/20 * * * *"  # every 30 minutes
+    - cron: "*/8 * * * *"  # every 30 minutes
   workflow_dispatch:        # allows manual run
 
 jobs:
