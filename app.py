@@ -13,7 +13,7 @@ SENT_FILE = "sent_offers.txt"
 if not os.path.exists(SENT_FILE):
     open(SENT_FILE, 'w').close()
 
-with open(SENT_FILE, 'r') as f:
+with open(SENT_FILE, 'r',encoding="utf-8", errors="ignore") as f:
     sent_offers_keys = set(line.strip() for line in f)
 
 # --- Telegram send  function ---
