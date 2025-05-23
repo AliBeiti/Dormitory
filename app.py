@@ -79,13 +79,18 @@ def create_message(offer):
     else:
         return 0
 
-i = 0
-print("script started")
-for i in range (2):
-    i += 1
-    print(i)
+# i = 0
+# print("script started")
+# for i in range (2):
+#     i += 1
+#     print(i)
+#     check_for_offer()
+#     #sleep_time = random.randint(500, 700)
+#     sleep_time = 500
+#     print(f"sleeping for {sleep_time} seconds")
+#     time.sleep(sleep_time)
+
+
+if __name__ == "__main__":
+    print("script started")
     check_for_offer()
-    #sleep_time = random.randint(500, 700)
-    sleep_time = 500
-    print(f"sleeping for {sleep_time} seconds")
-    time.sleep(sleep_time)
