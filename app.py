@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import time
 
 # --- Cinfiguration ---
-BOT_TOKEN = "7996896689:AAG0iZJiP95wf9_e8Bd9ud4tEprEU7HzleA"
-CHANNEL_ID = "@DortmundDormitoryoffers"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
 SENT_FILE = "sent_offers.txt"
 
 # --- Load sent offers ---
