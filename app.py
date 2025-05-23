@@ -79,9 +79,11 @@ def create_message(offer):
     else:
         return 0
 
-
-while True:
+i = 0
+for i in range (3)
+    i += 1
     check_for_offer()
-    sleep_time = random.randint(500, 700)
+    #sleep_time = random.randint(500, 700)
+    sleep_time = 500
     time.sleep(sleep_time)
     print(f"sleeping for {sleep_time} seconds")
