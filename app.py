@@ -64,6 +64,8 @@ def check_for_offer():
             # print(dic)
             offers_list.append(dic)
         process_offers(offers_list)
+    else:
+        print("no offers")
 
 
 def create_message(offer):
@@ -82,3 +84,4 @@ while True:
     check_for_offer()
     sleep_time = random.randint(500, 800)
     time.sleep(sleep_time)
+    print(f"sleeping for {sleep_time} seconds")
