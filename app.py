@@ -31,7 +31,7 @@ def send_to_channel(message):
 def process_offers(new_offers):
     global sent_offers_keys
     for offer in new_offers:
-        offer_key = f"{offer["town"]}|{offer["header"]}|{offer["price"]}|{offer["area"]}|{offer["available"]}"
+        offer_key = f'{offer["town"]}|{offer["header"]}|{offer["price"]}|{offer["area"]}|{offer["available"]}'
         if offer_key not in sent_offers_keys:
             if create_message(offer) != 0:
                 send_to_channel(create_message(offer))
