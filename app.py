@@ -94,3 +94,4 @@ def create_message(offer):
 if __name__ == "__main__":
     print("script started")
     check_for_offer()
+    send_to_channel(".")
