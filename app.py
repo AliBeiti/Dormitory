@@ -94,4 +94,6 @@ def create_message(offer):
 if __name__ == "__main__":
     print("script started")
     check_for_offer()
+    print(BOT_TOKEN)
+    print(CHANNEL_ID)
     send_to_channel(".")
