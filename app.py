@@ -13,9 +13,9 @@ SENT_FILE = "sent_offers.txt"
 if not os.path.exists(SENT_FILE):
     open(SENT_FILE, 'w').close()
 
-with open(SENT_FILE, 'r') as f:
+with open(SENT_FILE, 'r',encoding="utf-8", errors="ignore") as f:
     sent_offers_keys = set(line.strip() for line in f)
-
+print("file read")
 # --- Telegram send  function ---
 
 
@@ -26,18 +26,17 @@ def send_to_channel(message):
     response = requests.post(url, payload)
     print(response.status_code, response.text)
 
+
 # ---- offer processing ----
 
 
 def process_offers(new_offers):
     global sent_offers_keys
     for offer in new_offers:
-        offer_key = f"{offer['town']}|{offer['header']}|{offer['price']}|{offer['area']}|{offer['available']}"
+        offer_key = f'{offer["town"]}|{offer["header"]}|{offer["price"]}|{offer["area"]}|{offer["available"]}'
         if offer_key not in sent_offers_keys:
             if create_message(offer) != 0:
-                print("I am here")
                 send_to_channel(create_message(offer))
-                print(create_message(offer))
                 sent_offers_keys.add(offer_key)
                 with open(SENT_FILE, 'a') as f:
                     f.write(offer_key + "\n")
@@ -72,7 +71,6 @@ def check_for_offer():
     else:
         print("no offers")
 
-
 def create_message(offer):
     message = ""
     if offer['town'] == "Dortmund":
@@ -85,6 +83,7 @@ def create_message(offer):
         return message
     else:
         return 0
+
 
 # i = 0
 # print("script started")
