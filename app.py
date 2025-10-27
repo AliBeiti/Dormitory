@@ -44,7 +44,7 @@ def process_offers(new_offers):
 
 def check_for_offer():
     url = "https://www.stwdo.de/wohnen/aktuelle-wohnangebote"
-    response = requests.get(url)
+    response = requests.get(url, verify=False)
     soup = BeautifulSoup(response.text, "html.parser")
 
     Dortmund = soup.select_one(
@@ -103,4 +103,5 @@ if __name__ == "__main__":
     # print(BOT_TOKEN)
     # print(CHANNEL_ID)
     # send_to_channel(".")
+
 
