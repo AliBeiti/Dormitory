@@ -43,7 +43,7 @@ def process_offers(new_offers):
 
 
 def check_for_offer():
-    url = "https://www.stwdo.de/wohnen/aktuelle-wohnangebote#residential-offer-list"
+    url = "https://www.stwdo.de/wohnen/aktuelle-wohnangebote"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
 
@@ -103,3 +103,4 @@ if __name__ == "__main__":
     # print(BOT_TOKEN)
     # print(CHANNEL_ID)
     # send_to_channel(".")
+
